@@ -1,0 +1,78 @@
+function doGet(e) {
+  if (!e.parameter.page) {
+    var template = HtmlService.createTemplateFromFile('index')
+    return  template.evaluate().setSandboxMode(HtmlService.SandboxMode.IFRAME)
+    .addMetaTag('viewport', 'width=device-width , initial-scale=1')
+    
+  }
+  return HtmlService.createTemplateFromFile(e.parameter['page']).evaluate().setSandboxMode(HtmlService.SandboxMode.IFRAME)
+    .addMetaTag('viewport', 'width=device-width , initial-scale=1')
+}
+
+
+function getUrl() {
+  var url = ScriptApp.getService().getUrl()
+  return url
+}
+
+function uploadFiles(form) {
+  try {
+        var folderDes = DriveApp.getFolderById('1JTL8fQaurPz77bTg6tZoQRpGBgAHgj1q')
+    var subFolder = form.myLecturer
+    var folder, folders = DriveApp.getFoldersByName(subFolder);
+
+    if (folders.hasNext()) {
+      folder = folders.next();
+    } else {
+      folder = folderDes.createFolder(subFolder);
+    }
+    
+    // ระบุ Web app URL
+    var home = "https://script.google.com/macros/s/AKfycbz-JV_PG0zOFeXoRsexC_ATRjZe0Hpm8yY_2mcvXeknxho4TUw/exec";
+        
+    var file = folder.createFile(form.myFile);
+        file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.COMMENT);
+    var url = file.getUrl()
+    var name = form.myName
+    var nickname = form.myNickname
+    var date = form.myDate
+    var time = form.myTime
+    var telephone = form.myTelephone
+    var lecturer = form.myLecturer
+    
+    // ** ระบุ ID ของ googleSheet **
+    var ss = SpreadsheetApp.openById("13DaT22Xq4P7gAGN47FL_x2HspXbCqQSa1-shHk9PJho");
+    var sh = ss.getSheetByName('ข้อมูลการจองคิวทำเล็บ')
+    ss.appendRow([new Date(), name, nickname, date, time,telephone, lecturer, url])
+   return " ได้ถูกอัพโหลดเข้าระบบเป็นที่เรียบร้อยแล้ว ขอบคุณครับ  <p><p><a href ='"+url+"' ><button class='btn btn-outline-dark btn-lg'>ดูหลักฐานการชำระเงิน</button></a> <p><a href ='"+home+"' ><button class='btn btn-outline-dark btn-lg'>กลับหน้าหลัก</button></a>"   
+  } catch (error) {
+    return error.toString();
+  }
+
+}
+
+function include(filename) {
+  return HtmlService.createHtmlOutputFromFile(filename).getContent()
+}
+// Function for Searching 
+function processForm(formObject){  
+  var result = "";
+  if(formObject.searchtext){
+      result = search(formObject.searchtext);
+  }
+  return result;
+}
+
+function search(searchtext){
+  var spreadsheetId = '13DaT22Xq4P7gAGN47FL_x2HspXbCqQSa1-shHk9PJho';
+  var dataRage  = 'ข้อมูลการจองคิวทำเล็บ!A2:E';
+  var data = Sheets.Spreadsheets.Values.get(spreadsheetId, dataRage).values;
+  var ar = [];
+  
+  data.forEach(function(f) {
+    if (~f.indexOf(searchtext)) {
+      ar.push(f);
+    }
+  });
+  return ar;
+}

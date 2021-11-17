@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/ad42651166.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+     <!-- Google fonts link-->   
+    <link href='https://fonts.googleapis.com/css?family=Prompt' rel='stylesheet' type='text/css'>
+    <!-- Google fonts CSS --> 
+    <style type='text/css'>
+          .prompt { font-family: 'Prompt', sans-serif; }
+        body {
+            font-family: 'Prompt' !important; }
+    </style>
+
+  <title>Young Nails By Nut</title>
+</head>
+<body>
+<nav class="navbar navbar-light me-auto mb-0 mb-lg-0" style="background-color: #4B220A;">
+  <div class="container-fluid"class="text-center">
+   <ul class="navbar-nav me-5 mb-5 mb-lg-10 ">
+    <h1 class="prompt text-white"class="navbar-brand"> Young Nails By Nut  <i class="fas fa-palette"></i><i class="fas fa-paint-brush"></i></h1>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+ <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #CEAC93;">
+  <div class="container-fluid ">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav me-auto mb-9 mb-lg-0" >
+      
+        <li class="nav-item">
+        <?var url = getUrl();?>
+          <h4><a class="nav-link active" aria-current="page" href="<?=url?>?page=index"><i class="fas fa-home"></i> หน้าแรก</a></h4>
+        </li>
+        <li class="nav-item dropdown">
+          <h4 class="nav-link dropdown-toggle" href=" <?var url = getUrl();?>" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-hand-sparkles"></i>
+            รีวิว
+          </h4>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="<?=url?>?page=base">สีพื้น</a></li>
+            <li><a class="dropdown-item" href="<?=url?>?page=katy">สีแคทอาย</a></li>
+            <li><a class="dropdown-item" href="<?=url?>?page=marble">สีลูกแก้ว</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+         <?var url = getUrl();?>
+          <h4><a class="nav-link active" href="<?=url?>?page=appointment"><i class="far fa-edit"></i> จองคิว</a></h4>
+        </li>
+        <li class="nav-item">
+         <?var url = getUrl();?>
+          <h4><a class="nav-link active" href="<?=url?>?page=payment"><i class="fas fa-hand-holding-usd"></i> ช่องทางการชำระเงิน</a></h4>
+        </li>
+        <li class="nav-item">
+         <?var url = getUrl();?>
+          <h4><a class="nav-link active" href="<?=url?>?page=about-us"><i class="fas fa-users"></i> เกี่ยวกับเรา</a></h4>
+        </li>
+        <li class="nav-item">
+         <?var url = getUrl();?>
+          <h4><a class="nav-link active" href="https://datastudio.google.com/embed/reporting/fa0242f5-9c2a-42f3-8725-87258be9866f/page/XFOeC"><i class="far fa-calendar-minus"></i> รายงาน</a></h4>
+        </li>
+      </ul>
+</div>
+    </div>
+ 
+</nav>
+  
+<figure class="text-center">
+<br>
+<br>
+<h1>ลายเล็บสีแคทวาย</h1>
+
+<img src="https://drive.google.com/uc?id=1B4-rj-NvKiJGJfdaj9FchvmE34MFfY1j" class="border border-3"class="rounded float-start"width="300"height="250">
+<img src="https://drive.google.com/uc?id=1iH4bWeehMEW5DVhqJqonYbLcOK0m0m66" class="border border-3" width="300"height="250">
+<img src="https://drive.google.com/uc?id=1aLlh4H7gPwIaICnPNLHNTjW95MM1SbL5" class="border border-3" width="300"height="250">
+<img src="https://drive.google.com/uc?id=1WB5X1M--ZRnw5T9Zaj3bH3LT63EcwWm0" class="border border-3" width="300"height="250">
+<br>
+<br>
+<img src="https://drive.google.com/uc?id=1S3SB_qfhDFyy6glscti93ptXL76rx9cM" class="border border-3" width="300"height="250">
+<img src="https://drive.google.com/uc?id=1urer-cI37lKpOsFGqyWBIjAMofWEVW2y" class="border border-3" width="300"height="250">
+<img src="https://drive.google.com/uc?id=1CW_po6sqsa5ZKJ1X5L1qp9l6u--aXMv8" class="border border-3" width="300"height="250">
+
+</figure>
+</body>
+</html>
+<!-- JavaScript Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<!-- JavaScript SweetAlert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>

@@ -17,7 +17,7 @@ function getUrl() {
 
 function uploadFiles(form) {
   try {
-        var folderDes = DriveApp.getFolderById('1JTL8fQaurPz77bTg6tZoQRpGBgAHgj1q')
+        var folderDes = DriveApp.getFolderById('1jlKygR1vkoKcNmhneF9lSLdGetqjtFyA')
     var subFolder = form.myLecturer
     var folder, folders = DriveApp.getFoldersByName(subFolder);
 
@@ -28,7 +28,7 @@ function uploadFiles(form) {
     }
     
     // ระบุ Web app URL
-    var home = "https://script.google.com/macros/s/AKfycbz-JV_PG0zOFeXoRsexC_ATRjZe0Hpm8yY_2mcvXeknxho4TUw/exec";
+    var home = "https://script.google.com/macros/s/AKfycbymE_uPC0GRHZyZYOt_agBHF5Satmv2lsCr9TqqtlkSRkdr3d2m/exec";
         
     var file = folder.createFile(form.myFile);
         file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.COMMENT);
@@ -41,10 +41,10 @@ function uploadFiles(form) {
     var lecturer = form.myLecturer
     
     // ** ระบุ ID ของ googleSheet **
-    var ss = SpreadsheetApp.openById("13DaT22Xq4P7gAGN47FL_x2HspXbCqQSa1-shHk9PJho");
+    var ss = SpreadsheetApp.openById("1osodgEzn8dhUl-7eBfYPrfVGHW7LqYvap33KxyOfA3A");
     var sh = ss.getSheetByName('ข้อมูลการจองคิวทำเล็บ')
     ss.appendRow([new Date(), name, nickname, date, time,telephone, lecturer, url])
-   return " ได้ถูกอัพโหลดเข้าระบบเป็นที่เรียบร้อยแล้ว ขอบคุณครับ  <p><p><a href ='"+url+"' ><button class='btn btn-outline-dark btn-lg'>ดูหลักฐานการชำระเงิน</button></a> <p><a href ='"+home+"' ><button class='btn btn-outline-dark btn-lg'>กลับหน้าหลัก</button></a>"   
+   return "<p><p><a href ='"+url+"' ><button class='btn btn-outline-dark btn-lg'>ดูหลักฐานการชำระเงิน</button></a> <a href ='"+home+"' ><button class='btn btn-outline-dark btn-lg'>กลับหน้าหลัก</button></a>"   
   } catch (error) {
     return error.toString();
   }
@@ -64,7 +64,7 @@ function processForm(formObject){
 }
 
 function search(searchtext){
-  var spreadsheetId = '13DaT22Xq4P7gAGN47FL_x2HspXbCqQSa1-shHk9PJho';
+  var spreadsheetId = '1osodgEzn8dhUl-7eBfYPrfVGHW7LqYvap33KxyOfA3A';
   var dataRage  = 'ข้อมูลการจองคิวทำเล็บ!A2:E';
   var data = Sheets.Spreadsheets.Values.get(spreadsheetId, dataRage).values;
   var ar = [];

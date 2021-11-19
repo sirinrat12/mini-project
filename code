@@ -18,7 +18,7 @@ function getUrl() {
 function uploadFiles(form) {
   try {
         var folderDes = DriveApp.getFolderById('1jlKygR1vkoKcNmhneF9lSLdGetqjtFyA')
-    var subFolder = form.myLecturer
+    var subFolder = form.myFile
     var folder, folders = DriveApp.getFoldersByName(subFolder);
 
     if (folders.hasNext()) {

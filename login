@@ -2,10 +2,6 @@
 <html>
 
 <head>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-    
     <base target="_top">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,12 +13,12 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <script>
         var firebaseConfig = { // enter the details below
-  apiKey: "AIzaSyC0L7Hpx0g43Snx3btxzXA_QuAD_ScFhew",
-  authDomain: "login2-bddd3.firebaseapp.com",
-  projectId: "login2-bddd3",
-  storageBucket: "login2-bddd3.appspot.com",
-  messagingSenderId: "1015379177001",
-  appId: "1:1015379177001:web:1c2571b77c8d4a267e7638"
+  apiKey: "AIzaSyA-Vjq1sBnq7ZRxEVBT-nmelOn6-BaqG3s",
+  authDomain: "login-project-7646c.firebaseapp.com",
+  projectId: "login-project-7646c",
+  storageBucket: "login-project-7646c.appspot.com",
+  messagingSenderId: "690231460532",
+  appId: "1:690231460532:web:0f4b4cc7a7ccbe62ddcde1"
         };
         firebase.initializeApp(firebaseConfig);
     </script>
@@ -40,7 +36,7 @@
             var ui = new firebaseui.auth.AuthUI(firebase.auth());
             var user = firebase.auth().currentUser;
             if (user) {
-               window.open('https://script.google.com/macros/s/AKfycbz-JV_PG0zOFeXoRsexC_ATRjZe0Hpm8yY_2mcvXeknxho4TUw/exec');
+               window.open('https://script.google.com/macros/s/AKfycbymE_uPC0GRHZyZYOt_agBHF5Satmv2lsCr9TqqtlkSRkdr3d2m/exec');
                 document.getElementById("signOut").style.display = "inline-block";
             } else {
                 ui.start('#firebaseui-auth-container', uiConfig);
@@ -64,13 +60,11 @@
             
         });
     </script>
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
 </head>
 
 <body>
-    <img src="https://drive.google.com/uc?id=1zFTxfu60-xbQCW6RDagEViM8ZMBhYFI4"width="800"height="150" class ="carousel slide" >
     <div class="container center-align">
-        <br /><br /><h4>กรุณาลงชื่อเข้าใช้งาน</h4><br />
+        <br /><br /><h4>ลงชื่อเข้าใช้งาน</h4><br />
         <div id="firebaseui-auth-container"></div>
         <div class="row">
             <div class="col s12 m3 offset-m4">
